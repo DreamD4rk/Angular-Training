@@ -12,6 +12,53 @@ export class AppComponent {
 
   constructor() {
     console.log('holex');
+
+    //map() funciona solo con arrays
+    //map() itera: Realizar [cierta acción] varias veces.
+    //map() creo un nuevo array con el resultado
+    const auxMap = [1, 2, 3, 4, 5].map((num) => num * 2);
+    console.log('auxMap:', auxMap);
+    //resultado: auxMap [2, 4, 6, 8, 10]
+
+    //forEach() solo recorre el arraay, nada más.
+    const auxForEach = [1, 2, 3, 4, 5].forEach((num) => num * 2);
+    console.log('auxForEach:', auxForEach);
+
+    //find() busca el objeto, funciona en JSON's, devuelve objeto entero
+    const auxFind = [1, 2, 3, 4, 5].find((num) => num === 3);
+    console.log('auxFind:', auxFind);
+    //resultado: auxFind: 3
+
+    //findIndex() solo busca el índice del array
+    const auxFindIndex = [1, 2, 3, 4, 5].findIndex((num) => num === 4);
+    console.log('auxFindIndex:', auxFindIndex);
+    //resultado auxFindIndex: 3
+
+    //indexOf() recibe un arrray o cadena string
+    //usualmente no va funcion flecha
+    //cuado buscamos una palabra entera con indexof() muestra la primera letra de la palabra
+    //si no, muestra -1
+    const auxIndexOf = [1, 2, 3, 4, 5].indexOf(5);
+    console.log('auxIndexOf:', auxIndexOf);
+    //resultado: auxIndexOf: 0
+
+    //filter() devuelve un nuevo array desde el resultado
+    //si no encuentra nada al filtrar devuelve un array vacío
+    // si piden filtrar una info de un objeto va así en la función flecha:
+    //ejemplo: .filter(per.country  === 'Lima')
+    const auxFilter = [1, 2, 3, 4, 5].filter((num) => num % 2 === 0);
+    console.log('auxFilter:', auxFilter);
+    //resultado auxFilter: [2, 4]
+
+    //join() no recibe funcion flecha, solo 1 parámetro. Sirve como un separador
+    const auxJoin = [1, 2, 3, 4, 5].join('-');
+    console.log('auxJoin: ', auxJoin);
+    //resultado auxJoin: 1-2-3-4-5
+
+    //split() convierte una cadena en array,
+    const auxSplit = 'hola, mundo, test'.split(',');
+    console.log('auxSplit:', auxSplit);
+    //resultado: auxSplit: ["hola", " mundo", " test"]
   }
 
   //esto es una función en TS
